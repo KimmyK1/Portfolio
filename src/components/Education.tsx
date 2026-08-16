@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { config } from "@/site.config";
+import YearLabel from "./YearLabel";
 
 export default function Education() {
   return (
@@ -24,7 +25,9 @@ export default function Education() {
             <p className="mt-1 text-muted">{e.school}</p>
           </div>
 
-          <span className="shrink-0 text-sm text-purple">{e.period}</span>
+          <div className="shrink-0">
+            <YearLabel year={e.period} size="sm" tone="purple" />
+          </div>
         </div>
       ))}
     </div>

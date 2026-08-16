@@ -1,8 +1,3 @@
-// ======================================================================
-// SITE CONFIG — edit this file to change any content on the site.
-// No other file needs touching for text/link/project updates.
-// ======================================================================
-
 export type ProjectCategory = "programming" | "study";
 
 export interface Project {
@@ -10,10 +5,10 @@ export interface Project {
   year: number;
   category: ProjectCategory;
   description: string;
-  longDescription?: string;   // used by studies
+  longDescription?: string;  
   image: string;
   imageAlt: string;
-  links?: {                   // now optional + plural
+  links?: {                
     label: string;
     href: string;
     download?: boolean;
@@ -24,16 +19,16 @@ export const config = {
   person: {
     name: "Kimmy Karlsson",
     location: "Stockholm",
-    linkedin: "https://www.linkedin.com/in/kimmy-karlsson-63409a255/",   // ← fill in
-    email: "kimmykochar01@outlook.com",                               // ← fill in
-    cvPath: "/cv.pdf",                                      // file in /public
+    linkedin: "https://www.linkedin.com/in/kimmy-karlsson-63409a255/",   
+    email: "kimmykochar01@outlook.com",                           
+    cvPath: "/cv.pdf",                                   
   },
 
   hero: {
-    eyebrow: "Portfolio · Kimmy Karlsson · Sweden",
-    // The one-sentence pitch. First line plain, second line purple italic.
-    titleLine1: "If it doesn't work with a screen reader,",
-    titleLine2: "it doesn't work.",
+    eyebrow: "PORTFOLIO · KIMMY KARLSSON · SWEDEN",
+    titleBefore: "Hi, I'm ",
+    titleHighlight: "Kimmy!",
+    titleAfter: " Here is my work.",
     subtitle:
       "MSc student in Interactive Media Technology at KTH, building interactive work combining user studies and programming. Currently working with the Let's Uptech Initiative at Knightec Group",
   },
@@ -80,31 +75,31 @@ export const config = {
       category: "study",
       description: "Concept and user study on message-in-a-bottle digital communication.",
       longDescription:
-            "A group project exploring what it means to design a ritual for people that doesn't yet have one. We created Note to Sea for people in their 20's who has just entered the workforce. It's a figma prototype where the users write down something that they did or felt proud of doing that day. This note would then be folded physically or digitally into a paper boat and sent off to sea. The boats gather at 12 harbours symbolizing the 12 months in a year in order for users to look back and recognize their progress at a time in their lives where that feeling might not be as frequent.",
+            "We were asked to design a ritual for a context that lacks one, and picked the first years of a graduate's working life. We ran eight semi structured interviews and clustered the results into four problem areas. What we found was that small achievements go almost entirely unmarked at work, and imposter syndrome fills the space instead. People wanted recognition, but not the kind that puts them on display. A 'worst possible idea' workshop made that concrete: nearly every obvious celebration feature fails for the same reason, because making recognition public turns it into performance. So we built the opposite. You write down one thing you're proud of, fold it into a paper boat, and send it out anonymously. The boats gather at twelve harbours, one per month, so the months becomes something you can look back at in your own personal ritualistic way.",
       image: "/projects/note-to-sea.png",
       imageAlt: "Note to Sea concept imagery",
     },
     {
-      title: "SL Improvement Concept",
-      year: 2024,
-      category: "study",
-      description:
-        "UX concept study proposing improvements to Stockholm's public transit app.",
-        longDescription:
-            "A participatory design project carried out together with several disability organisations, working directly with people with visual, hearing and learning disabilities/impairments. The service our group was assigned to improve was SL, Stockholms public transport system. We worked high on the ladder of participation, the participants were collaborators shaping the concept further in all stages of the process until a final concept for the SL app and website were created. This project made clear that there is a lot of work to be done on websites to meet the new EU regulations for how accessible websites have to be for everyone to be able to use comfortably.",
-      image: "/projects/sl-concept.JPG",
-      imageAlt: "SL app concept screens",
-    },
-    {
       title: "Perception of Misinformation",
-      year: 2025,
+      year: 2024,
       category: "study",
       description:
         "User study on how interface design shapes trust in online information.",
         longDescription:
-            "A VR study on how AI-driven social cues shape what people believe. Using a Meta headset, participants watched 20 videos alongside virtual agents that reacted to it in real time, and we measured how these reactions shifted the participants' own judgements on if the videos were true or lies. The study formed a part of a larger study researching how AI influences the perception of misinformation in virtual environments, which is a question that gets more relevant as social VR spaces grow.",
+            "A VR study on whether AI driven social cues change what people believe. 17 participants watched 12 short-form videos in a Meta headset alongside virtual agents that reacted to the content in real time, and we thematically analysed how they reasoned about what was true and what was not. What we found was less about influence and more about role. Participants did not treat the agents as sources of fact at all. They read them as social commentators, closer to a comment section than a fact checker, and weighed their reactions accordingly. The study was part of a larger project on how AI shapes misinformation perception in immersive environments.",
       image: "/projects/misinformation.png",
       imageAlt: "Misinformation study material",
+    },
+    {
+      title: "SL Improvement Concept",
+      year: 2025,
+      category: "study",
+      description:
+        "UX concept study proposing improvements to Stockholm's public transit app.",
+        longDescription:
+            "A participatory design project with disability organisations, redesigning parts of Stockholm's public transport service. We started with automated accessibility testing, which flagged only 16 minor issues on the SL website plus text sizing, touch target and contrast problems in the app. Then we sat down with expert user consultants who use the service every day. What we found was that almost nothing that actually mattered had been caught by the tools. The barrier was not the interface, it was the journey: no live guidance on where you are, which train is yours, or what to do when something changes. That finding reframed the whole project, and we ended up designing concepts for a haptic guidance companion working alongside a rebuilt app, with the consultants shaping every iteration in order for it to accommodate various needs.",
+      image: "/projects/sl-concept.JPG",
+      imageAlt: "SL app concept screens",
     },
   ] satisfies Project[],
 
@@ -126,19 +121,19 @@ export const config = {
   {
     degree: "MSc Interactive Media Technology",
     school: "KTH Royal Institute of Technology",
-    period: "2025 —",
+    period: "2025 to present",
     logo: "/logos/kth-v2.png",
   },
   {
     degree: "BSc Media Technology, Game Design",
     school: "Södertörn University",
-    period: "2021 — 2024",
+    period: "2021 to 2024",
     logo: "/logos/sodertorn-v2.png",
   },
   {
-    degree: "Medical Engineering (one year)",
+    degree: "Medical Engineering",
     school: "Uppsala University",
-    period: "2020 — 2021",
+    period: "2020 to 2021",
     logo: "/logos/uppsala-v4.png",
   },
 ],

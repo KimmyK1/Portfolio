@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Project } from "@/site.config";
+import YearLabel from "@/components/YearLabel";
 
 export default function ProjectRow({ project }: { project: Project }) {
   const accent =
@@ -7,7 +8,9 @@ export default function ProjectRow({ project }: { project: Project }) {
 
   return (
     <article className="group grid items-center gap-6 rounded-3xl border border-line bg-card p-6 transition-colors hover:border-purple/40 hover:bg-deep/10 md:grid-cols-[100px_1fr_270px]">
-      <span className="text-sm text-muted">{project.year}</span>
+      <div className="w-24 shrink-0 pt-1">
+        <YearLabel year={project.year} />
+      </div>
 
       <div>
         <h3 className="font-display text-2xl transition-colors group-hover:text-purple">
