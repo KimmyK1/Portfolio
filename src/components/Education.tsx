@@ -26,7 +26,7 @@ export default function Education() {
           </div>
 
           <div className="shrink-0">
-            <YearLabel year={e.period} size="sm" tone="purple" />
+            <YearLabel year={e.period} size="sm" />
           </div>
         </div>
       ))}
