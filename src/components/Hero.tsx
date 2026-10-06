@@ -1,7 +1,7 @@
 import { config } from "@/site.config";
 
 export default function Hero() {
-  const { hero } = config;
+  const { hero, person } = config;
   return (
     <header>
       <p className="mb-6 text-xs uppercase tracking-[0.25em] text-muted">
@@ -15,6 +15,30 @@ export default function Hero() {
       <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
         {hero.subtitle}
       </p>
+      <div className="mt-6 flex flex-wrap gap-2">
+        <a
+          href={`mailto:${person.email}`}
+          className="rounded-full bg-purple px-4 py-2 text-xs font-semibold text-bg transition-opacity hover:opacity-85 focus-visible:outline-2 focus-visible:outline-purple"
+        >
+          Email me
+        </a>
+        <a
+          href={person.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border border-line px-4 py-2 text-xs transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
+        >
+          LinkedIn
+        </a>
+        <a
+          href={person.cvPath}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full border border-line px-4 py-2 text-xs transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
+        >
+          CV ↓
+        </a>
+      </div>
     </header>
   );
 }
