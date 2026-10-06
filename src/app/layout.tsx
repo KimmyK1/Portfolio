@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${fraunces.variable} ${inter.variable} bg-bg text-ink font-sans antialiased`}
       >
         {children}

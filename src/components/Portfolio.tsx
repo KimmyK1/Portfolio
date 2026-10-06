@@ -11,24 +11,31 @@ type Tab = (typeof config.tabs)[number];
 export default function Portfolio() {
   const [tab, setTab] = useState<Tab>("Projects");
 
+  // Newest first; ties keep their order from the config file.
+  const byYear = [...config.projects].sort((a, b) => b.year - a.year);
+
   const shown =
     tab === "Projects"
-      ? config.projects.filter((p) => p.category === "programming")
+      ? byYear.filter((p) => p.category === "programming")
       : tab === "Studies done"
-        ? config.projects.filter((p) => p.category === "study")
+        ? byYear.filter((p) => p.category === "study")
         : [];
 
   return (
     <section className="mt-12">
-      <nav className="flex gap-8 border-b border-line" role="tablist" aria-label="Portfolio sections">
+      <nav
+        className="grid grid-cols-3 gap-1.5 rounded-2xl border border-line bg-card p-1.5 sm:inline-grid"
+        role="tablist"
+        aria-label="Portfolio sections"
+      >
         {config.tabs.map((t) => (
           <button
             key={t}
             role="tab"
             aria-selected={tab === t}
             onClick={() => setTab(t)}
-            className={`-mb-px border-b-2 pb-3 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-purple ${
-              tab === t ? "border-purple text-ink" : "border-transparent text-muted hover:text-ink"
+            className={`rounded-xl px-3 py-3 text-sm font-semibold tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-purple sm:px-6 ${
+              tab === t ? "bg-purple text-bg shadow-sm" : "text-muted hover:bg-line hover:text-ink"
             }`}
           >
             {t}
