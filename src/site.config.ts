@@ -49,6 +49,7 @@ export const config = {
       links: [
         { label: "Open app", href: "https://arcadh.github.io/arca-dh/" },
         { label: "API docs", href: "https://arca-dh-main.onrender.com/api-docs/" },
+        { label: "View code", href: "https://github.com/ArcaDH/arca-dh" },
       ],
     },
     {
