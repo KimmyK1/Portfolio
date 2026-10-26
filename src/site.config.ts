@@ -8,6 +8,7 @@ export interface Project {
   longDescription?: string;  
   image: string;
   imageAlt: string;
+  imageAspect?: string;      // width/height, e.g. "1910/661"; defaults to 2/1
   links?: {                
     label: string;
     href: string;
@@ -36,6 +37,20 @@ export const config = {
   tabs: ["Projects", "Studies done", "Education"] as const,
 
   projects: [
+    {
+      title: "Arca",
+      year: 2026,
+      category: "programming",
+      description:
+        "Full-stack budgeting app for tracking transactions, recurring payments, budget plans and savings goals. Next.js frontend with an Express and PostgreSQL backend, containerised with Docker.",
+      image: "/projects/arca.png",
+      imageAlt: "Arca budget view with categories, assigned amounts and savings goals",
+      imageAspect: "1910/661",
+      links: [
+        { label: "Open app", href: "https://arcadh.github.io/arca-dh/" },
+        { label: "API docs", href: "https://arca-dh-main.onrender.com/api-docs/" },
+      ],
+    },
     {
         title: "Water Shader",
         year: 2025,

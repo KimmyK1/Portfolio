@@ -47,7 +47,7 @@ export default function Portfolio() {
         {tab === "Education" ? (
           <Education />
         ) : (
-          <div className="space-y-3">
+          <div className="space-y-6">
             {shown.map((p) =>
               p.category === "study" ? (
                 <StudyCard key={p.title} study={p} />

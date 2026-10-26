@@ -11,6 +11,9 @@ import {
   SiTailwindcss,
   SiGit,
   SiUnity,
+  SiPostgresql,
+  SiExpress,
+  SiDocker,
 } from "react-icons/si";
 
 // name → { icon, brand color }. Add a line here to add a tool.
@@ -22,6 +25,9 @@ const badges: { name: string; icon: IconType; color: string }[] = [
   { name: "C#", icon: TbBrandCSharp, color: "#8b5cf6" },
   { name: "React", icon: SiReact, color: "#61dafb" },
   { name: "Node.js", icon: SiNodedotjs, color: "#8cc84b" },
+  { name: "Express", icon: SiExpress, color: "#ffffff" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169e1" },
+  { name: "Docker", icon: SiDocker, color: "#2496ed" },
   { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38bdf8" },
   { name: "Git", icon: SiGit, color: "#f05032" },
