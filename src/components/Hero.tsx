@@ -12,13 +12,13 @@ export default function Hero() {
         <span className="text-purple">{hero.titleHighlight}</span>
         {hero.titleAfter}
       </h1>
-      <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+      <p className="mt-6 max-w-2xl text-lg leading-relaxed md:text-xl text-muted">
         {hero.subtitle}
       </p>
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="mt-8 flex flex-wrap gap-3">
         <a
           href={`mailto:${person.email}`}
-          className="rounded-full bg-purple px-4 py-2 text-xs font-semibold text-bg transition-opacity hover:opacity-85 focus-visible:outline-2 focus-visible:outline-purple"
+          className="rounded-full bg-purple px-5 py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-85 focus-visible:outline-2 focus-visible:outline-purple"
         >
           Email me
         </a>
@@ -26,7 +26,7 @@ export default function Hero() {
           href={person.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-line px-4 py-2 text-xs transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
+          className="rounded-full border border-line px-5 py-2.5 text-sm transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
         >
           LinkedIn
         </a>
@@ -34,7 +34,7 @@ export default function Hero() {
           href={person.cvPath}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-line px-4 py-2 text-xs transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
+          className="rounded-full border border-line px-5 py-2.5 text-sm transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
         >
           CV ↓
         </a>
