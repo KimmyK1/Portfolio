@@ -8,7 +8,7 @@ export default function Education() {
       {config.education.map((e) => (
         <div
           key={e.degree}
-          className="flex flex-wrap items-center gap-x-6 gap-y-4 rounded-3xl border border-line bg-card p-6 md:p-8"
+          className="flex items-center gap-5 rounded-3xl border border-line bg-card p-6 md:gap-6 md:p-8"
         >
           <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-white md:h-28 md:w-28">
             <Image
@@ -20,12 +20,16 @@ export default function Education() {
             />
           </div>
 
-          <div className="min-w-0 flex-1 basis-48">
+          <div className="min-w-0 flex-1">
             <h3 className="font-display text-2xl md:text-4xl">{e.degree}</h3>
             <p className="mt-2 text-lg text-muted md:text-xl">{e.school}</p>
+            {/* On narrow screens the period sits under the school instead of wrapping below the logo */}
+            <div className="mt-3 md:hidden">
+              <YearLabel year={e.period} size="sm" />
+            </div>
           </div>
 
-          <div className="shrink-0 md:text-right">
+          <div className="hidden shrink-0 text-right md:block">
             <YearLabel year={e.period} size="sm" />
           </div>
         </div>
