@@ -22,7 +22,7 @@ export default function Education() {
 
           <div className="min-w-0 flex-1 basis-48">
             <h3 className="font-display text-2xl md:text-4xl">{e.degree}</h3>
-            <p className="mt-2 text-base text-muted md:text-lg">{e.school}</p>
+            <p className="mt-2 text-lg text-muted md:text-xl">{e.school}</p>
           </div>
 
           <div className="shrink-0 md:text-right">
