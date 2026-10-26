@@ -20,7 +20,8 @@ export const config = {
   person: {
     name: "Kimmy Karlsson",
     location: "Stockholm",
-    linkedin: "https://www.linkedin.com/in/kimmy-karlsson-63409a255/",   
+    linkedin: "https://www.linkedin.com/in/kimmy-karlsson-63409a255/",
+    github: "https://github.com/KimmyK1",
     email: "kimmykochar01@outlook.com",                           
     cvPath: "/cv.pdf",                                   
   },
