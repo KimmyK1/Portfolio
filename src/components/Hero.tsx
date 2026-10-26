@@ -1,6 +1,7 @@
 import { SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import { TbFileDownload } from "react-icons/tb";
 import { config } from "@/site.config";
 
 export default function Hero() {
@@ -48,9 +49,10 @@ export default function Hero() {
           href={person.cvPath}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full border border-line px-5 py-2.5 text-sm transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm transition-colors hover:border-purple focus-visible:outline-2 focus-visible:outline-purple"
         >
-          CV ↓
+          <TbFileDownload size={17} aria-hidden />
+          CV
         </a>
       </div>
     </header>
