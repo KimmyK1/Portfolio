@@ -137,19 +137,19 @@ export const config = {
   {
     degree: "MSc Interactive Media Technology",
     school: "KTH Royal Institute of Technology",
-    period: "2025 to present",
+    period: "2025 – present",
     logo: "/logos/kth-v2.png",
   },
   {
     degree: "BSc Media Technology, Game Design",
     school: "Södertörn University",
-    period: "2021 to 2024",
+    period: "2021 – 2024",
     logo: "/logos/sodertorn-v2.png",
   },
   {
     degree: "Medical Engineering",
     school: "Uppsala University",
-    period: "2020 to 2021",
+    period: "2020 – 2021",
     logo: "/logos/uppsala-v4.png",
   },
 ],
