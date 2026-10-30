@@ -32,7 +32,7 @@ export const config = {
     titleHighlight: "Kimmy!",
     titleAfter: " Here is my work.",
     subtitle:
-      "Last year of my MSc in Interactive Media Technology at KTH, building interactive work combining user studies and programming. Currently working with the Let's Uptech Initiative at Knightec Group",
+      "Last year of my MSc in Interactive Media Technology at KTH, building interactive work combining user studies and programming. Currently working with the Let's Uptech Initiative at Knightec Group and doing my Master Thesis Project at Trafikverket.",
   },
 
   tabs: ["Projects", "Studies done", "Education"] as const,
